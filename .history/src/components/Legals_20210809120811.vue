@@ -1,0 +1,20 @@
+<template>
+    <div class="legals">
+        <p>COPYRIGHT © 2021 Economy plus s.r.o | Web solution by DEVISION</p>
+        <p>Osobnú údaje | Nastavenie súkromia </p>
+    </div>
+</template>
+
+<script>
+export default {
+    name:'Legals'
+}
+</script>
+
+<style lang="scss" scoped>
+    .legals{
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+    }
+</style>

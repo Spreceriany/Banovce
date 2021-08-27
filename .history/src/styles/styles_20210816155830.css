@@ -1,0 +1,5 @@
+:root{
+    --heading-size:clamp(2rem, 5vw, 3rem);
+    --smaller-header: clamp(1.5rem,5vw,2.25rem);
+    --paragraph:clamp(1rem, 5vw, 1.5rem)
+}
