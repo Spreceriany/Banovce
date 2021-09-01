@@ -6,7 +6,7 @@
       :title2="data.title2"
       :subtext="data.description"
       buttonText="Viac o nás"
-      v-bind:style="{'background-image': 'url('+data.image.filename+')'}"
+      :style=" data.image.filename"
     />
     <About />
     <Uspechy />
@@ -37,7 +37,6 @@ export default {
   data() {
     return {
       data: null,
-
     };
   },
 

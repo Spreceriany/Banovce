@@ -110,7 +110,7 @@ export default {
     }
   }
 
-  .rightt{
+  .right{
     visibility: hidden;
     position: relative;
     overflow: hidden;

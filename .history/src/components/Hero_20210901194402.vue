@@ -1,5 +1,5 @@
 <template>
-    <div class="bg" :class="backgroundImg" ref="bg">
+    <div class="bg" :class="backgroundImg" :style="{backgroundImage: bg}" ref="bg">
     </div>
     <div class="hero-container"  >
       <div class="left-side">

@@ -55,7 +55,15 @@ export default {
     background-image: url('../assets/about-bg.png');
   }
 
+  .homeBg{
+    background-image: url('../assets/uvod1-bg.png');
+    background-position: center;
+    background-size: cover;
+     @media(max-width:556px){
 
+      background-image: none;
+    }
+  }
 
   .bg{
     width: 100%;

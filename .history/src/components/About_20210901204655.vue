@@ -11,7 +11,7 @@
         </p>
       </div>
       <div class="rightt">
-        <img :src=data.image.filename alt="image" class="about-image"/>
+        <img src="{{data.image.filename}}" alt="image" class="about-image"/>
       </div>
     </div>
   </div>
@@ -110,7 +110,7 @@ export default {
     }
   }
 
-  .rightt{
+  .right{
     visibility: hidden;
     position: relative;
     overflow: hidden;

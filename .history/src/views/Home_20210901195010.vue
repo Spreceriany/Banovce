@@ -1,12 +1,13 @@
 <template>
   <div class="home" v-if="data">
+
     <Hero
       :title=data.title
       :bold="data.bold"
       :title2="data.title2"
       :subtext="data.description"
       buttonText="Viac o nás"
-      v-bind:style="{'background-image': 'url('+data.image.filename+')'}"
+      :style="{backgroundImage: 'url('+img+')'}"
     />
     <About />
     <Uspechy />
@@ -37,7 +38,7 @@ export default {
   data() {
     return {
       data: null,
-
+      img: require('https://api.storyblok.com/v2/cdn/stories/domovska-stranka-uvodna-sekcia?version=draft&token=ULhggiK1mlwtAQretJ4Snwtt&cv=1630517888')
     };
   },
 
