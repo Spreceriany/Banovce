@@ -7,9 +7,11 @@
     :subtext="data.description"
     buttonText="Konzultácia"
     :hideBtn2="{ hide: true }"
-     :hideBtn="{ hide: true }"
-    :backgroundImg="{ sluzbyBg: true }"
+    :hideBtn="{ hide: true }"
+   
   />
+  <img :src=data.image.filename alt="" class="bggg">
+
   <ThreeColumn/>
   <SluzbyGrid/>
   <Footer/>
@@ -23,7 +25,7 @@ import ThreeColumn from '../components/ThreeColumn.vue'
 import SluzbyGrid from '../components/SluzbyGrid.vue'
 import axios from "axios";
 import Footer from "../views/Footer.vue";
-
+import gsap from 'gsap'
 export default {
   name: 'ServicesPage',
   components: {
@@ -44,7 +46,10 @@ export default {
     .get(
       "https://api.storyblok.com/v2/cdn/stories/sluzby-stranka-uvodnka-sekcia?version=draft&token=ULhggiK1mlwtAQretJ4Snwtt"
     )
-    .then(response => (this.data = response.data.story.content));
+    .then(response => (this.data = response.data.story.content)).then( ()=>{
+         gsap.from(".bggg", {autoAlpha:0, ease: "power3.out", scale:1.2, duration:1.2})
+
+    });
   }
 }
 </script>
@@ -53,4 +58,13 @@ export default {
   .services-layout{
     overflow: hidden;
   }
+
+  .bggg{
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    object-fit: cover;
+}
 </style>

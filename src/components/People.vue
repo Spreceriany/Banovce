@@ -1,7 +1,7 @@
 <template>
   <div class="people-container" v-if="data">
-    <div class="image">
-      <img src="../assets/meeting.png" alt="meeting image" class="clip" />
+    <div class="imagee">
+      <img :src=data.image1.filename alt="meeting image" class="clip" />
     </div>
     <div class="text">
       <span>{{ data.bold1 }}</span>
@@ -11,8 +11,8 @@
   </div>
 
   <div class="people-container right" v-if="data">
-    <div class="image">
-      <img src="../assets/meeting2.png" alt="meeting image" class="clip" />
+    <div class="imagee">
+      <img :src=data.image2.filename alt="meeting image" class="clip" />
     </div>
     <div class="text">
       <span>{{ data.bold2 }}</span>
@@ -41,7 +41,7 @@ export default {
 
   methods: {
     anim(){
-         var images = gsap.utils.toArray(".image");
+         var images = gsap.utils.toArray(".imagee");
         var texts = gsap.utils.toArray(".text");
         texts.forEach(text => {
           gsap.from(text, {
@@ -106,7 +106,7 @@ export default {
     align-items: flex-start;
     padding: 3em 2em;
   }
-  .image {
+  .imagee {
     flex: 0 1 50%;
     position: relative;
     overflow: initial;

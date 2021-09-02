@@ -25,7 +25,7 @@ export default {
   mounted(){
 
     const { title, subtext, bg, btns} = this.$refs
-    t2.from(bg, {autoAlpha:0, ease: "power3.out", scale:1.2, duration:1.2})
+    t2.from(bg, {autoAlpha:0, ease: "power3.out", scale:1.2, duration:1})
       .from(title, {autoAlpha:0, y:-10, ease: "power2.out"}, "-=1")
       .from(subtext, {autoAlpha:0}, "<")
       .from(btns, {autoAlpha:0}, "<")
@@ -48,15 +48,18 @@ export default {
 <style scoped lang="scss">
 @import url("../styles/styles.css");
   .aboutBg{
-    background-image: url('../assets/about-bg-2.png');
+    background-image: url('../assets/about-bg-2.png') !important;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
 
   }
   .sluzbyBg{
     background-image: url('../assets/about-bg.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
   }
-
-
-
   .bg{
     width: 100%;
     background-size: cover;
@@ -66,15 +69,14 @@ export default {
     position: absolute;
     z-index: -1;
 
-    @media(max-width:556px){
-      background-position: -15% 25%;
-      background-size: 0px;
-      background-image: none;
-    }
+    
 
     @media(max-width:996px){
       background-position: -20%;
       background-size: cover;
+      background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
     }
 
 
@@ -90,6 +92,7 @@ export default {
     .left-side{
       flex: 0 1 50%;
       padding-left: 2em;
+      z-index: 2;
       @media (max-width:556px) {
         flex: 0 1 90%;
       }

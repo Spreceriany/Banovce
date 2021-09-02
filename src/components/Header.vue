@@ -99,6 +99,9 @@ header {
     img {
       width: 13em;
       height: auto;
+      @media(max-width:556px){
+        width: 10em;
+      }
     }
 
     .contact-btn {
